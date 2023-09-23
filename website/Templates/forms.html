@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SLE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{% include 'navbar.html' %}
+<div class="d-flex p-2">
+<form method="POST" enctype="multipart/form-data" action="{% url 'home' %}">
+    {% csrf_token %}
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br/>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" required><br/>
+
+    <label for="height">Height (in cm):</label>
+    <input type="number" name="height" required><br/>
+
+    <label for="weight">Weight (in kg):</label>
+    <input type="number" name="weight" required><br/>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br/>
+
+    <label for="malar_rash">Malar Rash:</label>
+    <input type="file" name="malar_rash"><br/>
+
+    <label for="discoid_rash">Discoid Rash:</label>
+    <input type="file" name="discoid_rash"><br/>
+
+    <label for="alopecia">Alopecia (patchy):</label>
+    <input type="file" name="alopecia"><br/>
+
+
+    <label for="Ulcerations">Ulcerations:</label>
+    <select name="ulcerations" required>
+        <option value=1>Yes</option>
+        <option value=0>No</option>
+    </select><br/>
+
+    <label for="photosensitivity">Photosensitivity:</label>
+<select name="photosensitivity" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="polyarthritis">Polyarthritis(Pain in joints that occurs symmetrically):</label>
+<select name="polyarthritis" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="fatigue">Fatigue:</label>
+<select name="fatigue" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="fever_chills">Fever and Chills (at night especially):</label>
+<select name="fever_chills" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="weight_loss">Weight loss/loss of appetite:</label>
+<select name="weight_loss" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="pericarditis">Pericarditis(have you experienced Pain in chest and shoulders that worsens when you cough):
+</label>
+<select name="pericarditis" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="endocarditis">Endocarditis(have you experienced shortness of breath, swelling in ankles and sharp chest pain?):</label>
+<select name="endocarditis" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="pleuritis">Pleuritis(do you experience a pain that worsens when you move your upper body?):</label>
+<select name="pleuritis" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="cerebritis">Cerebritis(do you suffer from headaches, anxiety, depression):</label>
+<select name="cerebritis" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="headache">Headache (often):</label>
+<select name="headache" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="peripheral_neuropathy">Peripheral Neuropathy(Gradual onset of numbness, prickling, or tingling in your feet or hands, Extreme sensitivity to touch,muscle weakness):</label>
+<select name="peripheral_neuropathy" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="renal_failure">Renal Failure(extreme tiredness, nausea and vomiting, peeing more often, cramps and diabetes) :</label>
+<select name="renal_failure" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="pregnancy_losses">Pregnancy Losses:</label>
+<select name="pregnancy_losses" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="anemia">Anemia:</label>
+<select name="anemia" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="leukopenia">Leukopenia(painful urination,low wbc count,sore throat, swelling and rednesscuts and sores that drain pus):</label>
+<select name="leukopenia" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+
+<label for="thrombocytopenia">Thrombocytopenia(blood in urine or stools,unusually heavy menstrual flows,prolonged bleeding from cuts easy bruising):</label>
+<select name="thrombocytopenia" required>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select><br/>
+    <input type="submit" value="Submit">
+    <a href="{% url 'output' %}">Submit</a>
+</form>
+</div>
+</body>
+</html>

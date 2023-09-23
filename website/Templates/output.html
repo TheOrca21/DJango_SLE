@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Add this section to display the prediction result -->
+{% if prediction is not None %}
+<div class="prediction-result">
+    <h2>Prediction Result:</h2>
+    <p>The predicted outcome is: {{ prediction_result }}</p>
+</div>
+{% endif %}
+
+</body>
+</html>
