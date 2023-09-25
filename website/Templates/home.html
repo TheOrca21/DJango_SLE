@@ -4,14 +4,58 @@
     <meta charset="UTF-8">
     <title>SLE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <style>
+        /* Custom styles here */
+        body {
+            background-color: #f4f4f4;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .jumbotron h1 {
+            font-size: 36px;
+        }
+        .section-content {
+            margin-top: 30px;
+        }
+        .section-header {
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 {% include 'navbar.html' %}
 {% block content %}
-<div class="col-md-6 offset-md-3">
-<P> hello </P>
-</div>
+<div class="container">
+        <div class="jumbotron text-center">
+            <h1>Welcome to Lupus Awareness</h1>
+            <p>Learn about Lupus and Raise Awareness</p>
+        </div>
+
+        <div class="section-content">
+            <div class="section-header">What is Lupus?</div>
+            <p>
+                Lupus, also known as Systemic Lupus Erythematosus (SLE), is a chronic autoimmune disease that can affect various parts of the body, including the skin, joints, kidneys, heart, lungs, and brain.<br/> It occurs when the immune system mistakenly attacks healthy tissues, leading to inflammation, pain, and damage to organs.
+            </p>
+        </div>
+
+        <div class="section-content">
+            <div class="section-header">Images of Lupus</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="D:\\djsle\\image-1.jpg" alt="Lupus Image 1" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="D:\\djsle\\image-2.jpg" alt="Lupus Image 2" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="D:\\djsle\\image-3.jpg" alt="Lupus Image 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 </body>
 </html>
